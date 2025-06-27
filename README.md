@@ -1,73 +1,101 @@
-# Welcome to your Lovable project
 
-## Project info
+# VulnApp - Application Web d'Entraînement
 
-**URL**: https://lovable.dev/projects/25e146a7-bf3d-4541-b163-37bd0793cfce
+## Description
 
-## How can I edit this code?
+VulnApp est une application web moderne conçue pour l'apprentissage de la cybersécurité. Elle simule une plateforme utilisateur classique avec différentes fonctionnalités courantes.
 
-There are several ways of editing your application.
+## Déploiement Local
 
-**Use Lovable**
+### Prérequis
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/25e146a7-bf3d-4541-b163-37bd0793cfce) and start prompting.
+- Node.js (version 16 ou supérieure)
+- npm ou yarn
 
-Changes made via Lovable will be committed automatically to this repo.
+### Installation
 
-**Use your preferred IDE**
+1. Clonez le repository :
+```bash
+git clone <votre-repository-url>
+cd vulnapp
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+2. Installez les dépendances :
+```bash
+npm install
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Démarrez l'application en mode développement :
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Ouvrez votre navigateur et accédez à :
+```
+http://localhost:5173
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Commandes disponibles
 
-**Use GitHub Codespaces**
+- `npm run dev` - Démarre le serveur de développement
+- `npm run build` - Compile l'application pour la production
+- `npm run preview` - Prévisualise la version de production
+- `npm run lint` - Vérifie la qualité du code
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Structure du projet
 
-## What technologies are used for this project?
+```
+src/
+├── components/ui/     # Composants d'interface réutilisables
+├── pages/            # Pages de l'application
+│   ├── Index.tsx     # Page d'accueil
+│   ├── Login.tsx     # Authentification
+│   ├── Register.tsx  # Inscription
+│   ├── Profile.tsx   # Profil utilisateur
+│   ├── Search.tsx    # Recherche
+│   ├── Admin.tsx     # Administration
+│   ├── Upload.tsx    # Upload de fichiers
+│   └── Contact.tsx   # Contact
+├── lib/              # Utilitaires
+└── App.tsx          # Composant racine
+```
 
-This project is built with:
+## Fonctionnalités
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- 🔐 Système d'authentification complet
+- 👤 Gestion des profils utilisateurs
+- 🔍 Moteur de recherche intégré
+- 📁 Upload et gestion de fichiers
+- 📧 Formulaire de contact
+- ⚡ Interface moderne et responsive
+- 🛡️ Panel d'administration
 
-## How can I deploy this project?
+## Technologies utilisées
 
-Simply open [Lovable](https://lovable.dev/projects/25e146a7-bf3d-4541-b163-37bd0793cfce) and click on Share -> Publish.
+- **Frontend** : React 18, TypeScript, Tailwind CSS
+- **Routing** : React Router
+- **UI Components** : Shadcn/ui
+- **Icons** : Lucide React
+- **Build Tool** : Vite
 
-## Can I connect a custom domain to my Lovable project?
+## Comptes de test
 
-Yes, you can!
+Pour tester l'application, vous pouvez utiliser ces comptes :
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- **Utilisateur standard** : `user` / `password`
+- **Administrateur** : `admin` / `admin123`
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Notes importantes
+
+⚠️ Cette application est conçue pour un usage éducatif uniquement. Elle ne doit être utilisée que dans un environnement de test sécurisé et isolé.
+
+## Support
+
+Si vous rencontrez des problèmes, vérifiez que :
+- Node.js et npm sont correctement installés
+- Toutes les dépendances sont installées (`npm install`)
+- Le port 5173 est disponible
+
+## Licence
+
+Ce projet est destiné à un usage éducatif uniquement.
